@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abdulaziz Hkeem — Links</title>
-  <meta name="description" content="AI & Data — Abdulaziz Hkeem (Azowz) | All important links in one place" />
-  <meta property="og:title" content="Abdulaziz Hkeem — Links" />
-  <meta property="og:description" content="AI & Data — Abdulaziz Hkeem (Azowz) | All important links in one place" />
+  <title>Abdulaziz Hkeem — AI & Data Specialist</title>
+  <meta name="description" content="AI & Data — Abdulaziz Hkeem (Azowz) | Building AI‑Driven Trading Systems" />
+  <meta property="og:title" content="Abdulaziz Hkeem — AI & Data Specialist" />
+  <meta property="og:description" content="AI & Data — Abdulaziz Hkeem (Azowz) | Building AI‑Driven Trading Systems" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./avatar.jpg" />
-  <meta name="theme-color" content="#0f0f14" />
+  <meta name="theme-color" content="#7c3aed" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -24,167 +24,597 @@
       --accent: #7c3aed;
       --accent-2: #22d3ee;
       --ring: rgba(124,58,237,.35);
+      --gradient-1: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%);
+      --gradient-2: linear-gradient(135deg, rgba(124,58,237,.1) 0%, rgba(34,211,238,.1) 100%);
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    html, body { 
+      height: 100%; 
+    }
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 10% 0%, rgba(124,58,237,.15), transparent 60%),
-                  radial-gradient(1000px 500px at 90% 10%, rgba(34,211,238,.12), transparent 60%),
-                  linear-gradient(180deg, #0b0b10, #0a0a0f 60%);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: 
+        radial-gradient(ellipse at 20% 10%, rgba(124,58,237,.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(34,211,238,.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 40% 90%, rgba(124,58,237,.08) 0%, transparent 60%),
+        linear-gradient(180deg, #0b0b10 0%, #09090e 100%);
       color: var(--text);
-      display: grid;
-      place-items: center;
-      padding: 28px 16px 48px;
+      min-height: 100vh;
+      padding: 20px 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .page { width: 100%; max-width: 700px; }
+    .page { 
+      width: 100%; 
+      max-width: 800px; 
+      margin: 0 auto;
+      padding: 20px 0;
+    }
 
     .card {
-      background: color-mix(in oklab, var(--card) 92%, black 8%);
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.45);
-      backdrop-filter: blur(6px);
+      background: color-mix(in oklab, var(--card) 95%, transparent 5%);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 28px;
+      padding: 40px 35px 35px;
+      box-shadow: 
+        0 25px 50px -12px rgba(0,0,0,.5),
+        0 0 0 1px rgba(255,255,255,.03);
+      backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gradient-1);
+      opacity: 0.6;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 30px 60px -12px rgba(0,0,0,.6),
+        0 0 0 1px rgba(124,58,237,.1);
     }
 
     header {
       display: grid;
-      grid-template-columns: 84px 1fr;
-      gap: 16px;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
       align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar-container {
+      position: relative;
     }
 
     .avatar {
-      width: 84px; height: 84px;
-      border-radius: 20px;
+      width: 100px; 
+      height: 100px;
+      border-radius: 24px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: 0 8px 24px rgba(124,58,237,.25);
+      border: 2px solid rgba(255,255,255,.1);
+      box-shadow: 
+        0 10px 30px rgba(124,58,237,.3),
+        0 0 0 1px rgba(124,58,237,.2);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
     }
-    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: .2px; }
-    .tagline { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+    .avatar:hover {
+      transform: scale(1.05);
+      box-shadow: 
+        0 15px 40px rgba(124,58,237,.4),
+        0 0 0 1px rgba(124,58,237,.3);
+    }
 
-    .badges { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
-    .badge { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(124,58,237,.16); border: 1px solid rgba(124,58,237,.25); }
+    .avatar img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block; 
+    }
 
-    .section-title { margin: 22px 8px 10px; color: var(--muted); font-weight: 600; font-size: 12px; letter-spacing: .8px; text-transform: uppercase; }
+    .avatar-glow {
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: var(--gradient-1);
+      border-radius: 28px;
+      filter: blur(12px);
+      opacity: 0.4;
+      z-index: 0;
+    }
 
-    .links { margin-top: 20px; display: grid; gap: 12px; }
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    h1 { 
+      margin: 0; 
+      font-size: 32px; 
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .username {
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .tagline { 
+      margin: 0; 
+      color: var(--muted); 
+      font-size: 16px; 
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 500px;
+    }
+
+    .badges { 
+      margin: 16px 0 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 10px; 
+    }
+
+    .badge { 
+      font-size: 13px; 
+      padding: 8px 14px; 
+      border-radius: 12px; 
+      background: var(--gradient-2);
+      border: 1px solid rgba(124,58,237,.2);
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s ease;
+    }
+
+    .badge:hover {
+      transform: translateY(-2px);
+      border-color: rgba(124,58,237,.4);
+      box-shadow: 0 5px 15px rgba(124,58,237,.2);
+    }
+
+    .section-title { 
+      margin: 32px 0 16px; 
+      color: var(--text); 
+      font-weight: 600; 
+      font-size: 18px; 
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: block;
+    }
+
+    .links { 
+      display: grid; 
+      gap: 16px; 
+    }
 
     .link {
-      display: flex; align-items: center; gap: 12px;
+      display: flex; 
+      align-items: center; 
+      gap: 16px;
       width: 100%;
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      background: linear-gradient(135deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.02) 100%);
       border: 1px solid rgba(255,255,255,.08);
-      border-radius: 16px;
-      padding: 14px 16px;
+      border-radius: 18px;
+      padding: 18px 20px;
       text-decoration: none;
       color: var(--text);
-      font-weight: 600; letter-spacing: .2px;
-      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+      font-weight: 500; 
+      letter-spacing: 0.2px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+      position: relative;
+      overflow: hidden;
     }
-    .link:hover { transform: translateY(-2px); border-color: var(--ring); box-shadow: 0 8px 20px rgba(124,58,237,.18); }
-    .link span { opacity: .92; }
-    .icon { width: 22px; height: 22px; opacity: .9; }
 
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--gradient-2);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
-    footer { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 12.5px; }
-    .madeby { opacity: .8; }
-    .theme-toggle { all: unset; cursor: pointer; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.12); }
+    .link:hover { 
+      transform: translateY(-3px) scale(1.01); 
+      border-color: var(--ring); 
+      box-shadow: 0 10px 25px rgba(124,58,237,.2); 
+    }
 
-    @media (max-width: 520px) {
+    .link:hover::before {
+      opacity: 1;
+    }
+
+    .link-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .icon-container {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .link:hover .icon-container {
+      background: rgba(255,255,255,.1);
+      transform: scale(1.1);
+    }
+
+    .icon { 
+      width: 22px; 
+      height: 22px; 
+      opacity: 0.9; 
+    }
+
+    .link span { 
+      opacity: .95; 
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .link-arrow {
+      margin-left: auto;
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: all 0.3s ease;
+    }
+
+    .link:hover .link-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .grid { 
+      display: grid; 
+      gap: 16px; 
+      grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+
+    footer { 
+      margin-top: 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      color: var(--muted); 
+      font-size: 14px; 
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .madeby { 
+      opacity: .8; 
+      font-weight: 400;
+    }
+
+    .theme-toggle { 
+      all: unset; 
+      cursor: pointer; 
+      padding: 10px; 
+      border-radius: 50%; 
+      border: 1px solid rgba(255,255,255,.12); 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,.03);
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255,255,255,.08);
+      transform: scale(1.1) rotate(12deg);
+      border-color: rgba(124,58,237,.3);
+    }
+
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card > * {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card > *:nth-child(1) { animation-delay: 0.1s; }
+    .card > *:nth-child(2) { animation-delay: 0.2s; }
+    .card > *:nth-child(3) { animation-delay: 0.3s; }
+    .card > *:nth-child(4) { animation-delay: 0.4s; }
+    .card > *:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
       .grid { grid-template-columns: 1fr; }
-      header { grid-template-columns: 64px 1fr; }
-      .avatar { width: 64px; height: 64px; border-radius: 14px; }
+      header { 
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+      }
+      .avatar { 
+        width: 120px; 
+        height: 120px; 
+        margin: 0 auto;
+      }
+      .card {
+        padding: 30px 25px;
+        border-radius: 24px;
+      }
+      h1 { font-size: 28px; }
+      .tagline { font-size: 15px; }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 25px 20px;
+        border-radius: 20px;
+      }
+      .avatar { 
+        width: 100px; 
+        height: 100px; 
+      }
+      h1 { font-size: 24px; }
+      .tagline { font-size: 14px; }
+      .link {
+        padding: 16px 18px;
+      }
+      footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="page">
+  <main class="page" dir="ltr">
     <div class="card">
       <header>
-        <div class="avatar">
-          <img src="https://avatars.githubusercontent.com/u/132227630?v=4" alt="Abdulaziz Hkeem" />
+        <div class="avatar-container">
+          <div class="avatar-glow"></div>
+          <div class="avatar">
+            <img src="https://avatars.githubusercontent.com/u/132227630?v=4" alt="Abdulaziz Hkeem" />
+          </div>
         </div>
-        <div>
-          <h1>Abdulaziz Hkeem <span style="opacity:.6;font-weight:500">(Azowz)</span></h1>
-          <p class="tagline">AI & Data • Quant-minded • Building AI‑Driven Trading Systems (US & Saudi)</p>
+        <div class="header-content">
+          <h1>Abdulaziz Hkeem</h1>
+          <div class="username">Azowz</div>
+          <p class="tagline">AI & Data Specialist • Quant-minded Developer • Building Next-Gen AI‑Driven Trading Systems</p>
           <div class="badges">
             <span class="badge">Generative AI Bootcamp — 512h</span>
             <span class="badge">Oracle GenAI Professional</span>
             <span class="badge">FastAPI • Python • SQL</span>
+            <span class="badge">US & Saudi Markets</span>
           </div>
         </div>
       </header>
 
-      <div class="section-title">Primary</div>
+      <div class="section-title">Primary Links</div>
       <div class="links">
         <a class="link" href="https://github.com/azowz" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.55.12-3.22 0 0 1.01-.32 3.3 1.24a11.47 11.47 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.65 1.67.24 2.92.12 3.22.76.85 1.23 1.93 1.23 3.25 0 4.63-2.8 5.64-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
-          <span>GitHub</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.55.12-3.22 0 0 1.01-.32 3.3 1.24a11.47 11.47 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.65 1.67.24 2.92.12 3.22.76.85 1.23 1.93 1.23 3.25 0 4.63-2.8 5.64-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+            </div>
+            <span>GitHub Profile</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="https://www.kaggle.com/abdulazizhkeem" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h4v6l5-6h4l-6 7 7 8h-4l-6-7v7H4V3z"/></svg>
-          <span>Kaggle</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h4v6l5-6h4l-6 7 7 8h-4l-6-7v7H4V3z"/></svg>
+            </div>
+            <span>Kaggle Competitions</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="https://linkedin.com/in/" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 5 2.12 5 3.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.7-2.2 3.6-2.2C20 8 21 11 21 14.9V24h-4v-8c0-1.9 0-4.3-2.6-4.3s-3 2-3 4.1V24H8V8z"/></svg>
-          <span>LinkedIn</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 5 2.12 5 3.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.7-2.2 3.6-2.2C20 8 21 11 21 14.9V24h-4v-8c0-1.9 0-4.3-2.6-4.3s-3 2-3 4.1V24H8V8z"/></svg>
+            </div>
+            <span>LinkedIn Network</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="./resume.pdf" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm1 7h5l-5-5v5ZM8 13h8v2H8v-2Zm0-4h5v2H8V9Zm0 8h8v2H8v-2Z"/></svg>
-          <span>Resume (PDF)</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm1 7h5l-5-5v5ZM8 13h8v2H8v-2Zm0-4h5v2H8V9Zm0 8h8v2H8v-2Z"/></svg>
+            </div>
+            <span>Download Resume (PDF)</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="https://azowz.vercel.app" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 1 21h22L12 2Zm0 4.6L19.53 20H4.47L12 6.6Z"/></svg>
-          <span>Portfolio</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 1 21h22L12 2Zm0 4.6L19.53 20H4.47L12 6.6Z"/></svg>
+            </div>
+            <span>Portfolio Website</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
       </div>
 
-      <div class="section-title">Projects</div>
+      <div class="section-title">Featured Projects</div>
       <div class="links grid">
         <a class="link" href="https://github.com/azowz/ai_treader_stock" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"/></svg>
-          <span>AI Trader Stock (FastAPI + ML)</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"/></svg>
+            </div>
+            <span>AI Trader Stock (FastAPI + ML)</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="#" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm1 10.59V7h-2v7h5v-2h-3Z"/></svg>
-          <span>Project 2</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm1 10.59V7h-2v7h5v-2h-3Z"/></svg>
+            </div>
+            <span>Quant Analysis Platform</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
       </div>
 
-      <div class="section-title">Contact</div>
+      <div class="section-title">Get In Touch</div>
       <div class="links">
         <a class="link" href="mailto:abdulazizhkeem9@gmail.com">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
-          <span>Email</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+            </div>
+            <span>Email: abdulazizhkeem9@gmail.com</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="https://t.me/azo_wz" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.036 15.58 8.88 19.6c.32 0 .46-.14.63-.31l1.52-1.47 3.16 2.32c.58.32 1 .15 1.17-.53l2.12-9.96c.19-.85-.31-1.18-.87-.97l-12.5 4.82c-.85.33-.84.8-.15 1.01l3.21.98 7.45-4.7c.35-.23.66-.1.4.14l-6.1 5.37Z"/></svg>
-          <span>Telegram</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.036 15.58 8.88 19.6c.32 0 .46-.14.63-.31l1.52-1.47 3.16 2.32c.58.32 1 .15 1.17-.53l2.12-9.96c.19-.85-.31-1.18-.87-.97l-12.5 4.82c-.85.33-.84.8-.15 1.01l3.21.98 7.45-4.7c.35-.23.66-.1.4.14l-6.1 5.37Z"/></svg>
+            </div>
+            <span>Telegram: @azo_wz</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
         <a class="link" href="http://wa.me/966594909409" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12 0a12 12 0 0 0-10.63 17.44L0 24l6.73-1.77A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22a9.93 9.93 0 0 1-5.06-1.39l-.36-.21-4 .99 1.04-3.9-.26-.4A9.93 9.93 0 0 1 2 12C2 6.48 6.48 2 12 2c2.66 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.05-7.4c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.32a7.98 7.98 0 0 1-1.47-1.82c-.16-.27-.02-.42.12-.56.13-.13.27-.34.41-.5.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.46-.84-2-.22-.52-.44-.45-.61-.46l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.28s.99 2.64 1.13 2.82c.14.18 1.95 2.97 4.73 4.17.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.62-.66 1.85-1.3.23-.64.23-1.18.16-1.3-.07-.12-.25-.2-.52-.34z"/></svg>
-          <span>WhatsApp</span>
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12 0a12 12 0 0 0-10.63 17.44L0 24l6.73-1.77A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22a9.93 9.93 0 0 1-5.06-1.39l-.36-.21-4 .99 1.04-3.9-.26-.4A9.93 9.93 0 0 1 2 12C2 6.48 6.48 2 12 2c2.66 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.05-7.4c-.27-.14-1.62-.8-1.87-.89-.25-.1-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.32a7.98 7.98 0 0 1-1.47-1.82c-.16-.27-.02-.42.12-.56.13-.13.27-.34.41-.5.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.46-.84-2-.22-.52-.44-.45-.61-.46l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.28s.99 2.64 1.13 2.82c.14.18 1.95 2.97 4.73 4.17.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.62-.66 1.85-1.3.23-.64.23-1.18.16-1.3-.07-.12-.25-.2-.52-.34z"/></svg>
+            </div>
+            <span>WhatsApp: +966594909409</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
-      </div>
-      <a class="link" href="tel:0594909409">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.07 22.24 1.76 13.93 1.76 3.5a1 1 0 0 1 1-1H6.3a1 1 0 0 1 1 1c0 1.35.26 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.23 2.3z"/></svg>
-          <span>Phone: 0594909409</span>
+        <a class="link" href="tel:0594909409">
+          <div class="link-content">
+            <div class="icon-container">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.07 22.24 1.76 13.93 1.76 3.5a1 1 0 0 1 1-1H6.3a1 1 0 0 1 1 1c0 1.35.26 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.23 2.3z"/></svg>
+            </div>
+            <span>Phone: 0594909409</span>
+            <div class="link-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
         </a>
       </div>
 
       <footer>
-        <span class="madeby">© <span id="year"></span> Abdulaziz Hkeem</span>
-        <button class="theme-toggle" id="toggle">Toggle Theme</button>
+        <span class="madeby">© <span id="year"></span> Abdulaziz Hkeem — AI & Data Specialist</span>
+        <button class="theme-toggle" id="toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2V4a8 8 0 1 1 0 16z"/>
+          </svg>
+        </button>
       </footer>
     </div>
   </main>
@@ -207,7 +637,15 @@
 
       document.body.style.background = (palette === light)
         ? '#f5f7ff'
-        : 'radial-gradient(1200px 600px at 10% 0%, rgba(124,58,237,.15), transparent 60%),\n           radial-gradient(1000px 500px at 90% 10%, rgba(34,211,238,.12), transparent 60%),\n           linear-gradient(180deg, #0b0b10, #0a0a0f 60%)';
+        : 'radial-gradient(ellipse at 20% 10%, rgba(124,58,237,.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(34,211,238,.12) 0%, transparent 60%), radial-gradient(ellipse at 40% 90%, rgba(124,58,237,.08) 0%, transparent 60%), linear-gradient(180deg, #0b0b10 0%, #09090e 100%)';
+      
+      // Update the icon based on theme
+      const icon = btn.querySelector('svg');
+      if (palette === light) {
+        icon.innerHTML = '<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>';
+      } else {
+        icon.innerHTML = '<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2V4a8 8 0 1 1 0 16z"/>';
+      }
     }
 
     btn.addEventListener('click', () => {
